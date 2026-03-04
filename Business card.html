@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta Profesional Uber - Contacto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-fondo: #000000;
+            --color-primario: #ffffff;
+            --color-acento: #c6a664; 
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background-color: var(--color-fondo);
+            color: var(--color-primario);
+            width: 320px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            text-align: center;
+            border: 1px solid #333;
+        }
+
+        .logo-uber {
+            width: 70px;
+            margin-bottom: 15px;
+            filter: brightness(1.2);
+        }
+
+        h1 {
+            font-size: 22px;
+            margin: 10px 0 5px 0;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            color: var(--color-acento);
+            font-weight: 300;
+            font-size: 13px;
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        /* Sección del Código QR */
+        .qr-container {
+            background: white;
+            padding: 10px;
+            display: inline-block;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .qr-container img {
+            width: 150px;
+            height: 150px;
+            display: block;
+        }
+
+        .btn {
+            display: block;
+            background-color: var(--color-primario);
+            color: black;
+            text-decoration: none;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .btn-whatsapp { background-color: #25D366; color: white; }
+
+        /* AJUSTES PARA IMPRESIÓN FISICA */
+        @media print {
+            body { background: white; padding: 0; }
+            .card {
+                width: 3.5in;
+                height: 2.1in; /* Tamaño estándar tarjeta */
+                box-shadow: none;
+                border: 1px solid #000;
+                color: black;
+                background: white;
+            }
+            .logo-uber { filter: invert(1); } /* Logo negro para imprimir */
+            .subtitle { color: #555; }
+            .btn { display: none; } /* No imprimimos botones */
+            .qr-container { border: 1px solid #ccc; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Uber_logo_2018.svg/2560px-Uber_logo_2018.svg.png" alt="Uber" class="logo-uber">
+        
+        <h1>LUIS F MORENO</h1>
+        <span class="subtitle">Transporte Privado & Ejecutivo</span>
+
+        <div class="qr-container">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wa.me/+5616577448" alt="Escanéame">
+            <p style="color: black; font-size: 10px; margin-top: 5px;">ESCANÉAME</p>
+        </div>
+
+        <a href="tel:+123456789" class="btn">Llamar</a>
+        <a href="https://wa.me/123456789" class="btn btn-whatsapp">WhatsApp</a>
+    </div>
+
+</body>
+</html>
